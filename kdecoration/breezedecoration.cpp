@@ -819,7 +819,8 @@ QSharedPointer<KDecoration2::DecorationShadow> Decoration::createShadowObject(co
     painter.setBrush(Qt::black);
     painter.setCompositionMode(QPainter::CompositionMode_DestinationOut);
     painter.drawRoundedRect(innerRect, m_scaledCornerRadius + 0.5, m_scaledCornerRadius + 0.5);
-
+  
+    /*
     // Draw window outline
     const qreal outlineWidth = 1.001;
     const qreal penOffset = outlineWidth / 2;
@@ -851,7 +852,7 @@ QSharedPointer<KDecoration2::DecorationShadow> Decoration::createShadowObject(co
     painter.setCompositionMode(QPainter::CompositionMode_Source);
     painter.setRenderHint(QPainter::Antialiasing);
     painter.drawPath(outlinePath);
-
+    */
     painter.end();
 
     auto ret = QSharedPointer<KDecoration2::DecorationShadow>::create();
